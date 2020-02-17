@@ -1,4 +1,4 @@
-i httpd.yml    //httpd.yml playbook name
+vi httpd.yml    //httpd.yml playbook name
 
 - hosts: localhost
   tasks:
