@@ -1,0 +1,12 @@
+vi file.yml   //playbook name
+
+- hosts: localhost
+  tasks:
+     - file:
+         state: absent
+         path:"{{ item }}"
+       with_items:
+         - filename1.txt
+         - filename2.txt
+
+ansible-playbook file.yml   //to run the playbook to automatically delete filename entered in the playbook
