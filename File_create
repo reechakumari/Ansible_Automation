@@ -1,0 +1,13 @@
+vi file.yml   //playbook name
+
+- hosts: localhost
+  tasks:
+     - file:
+         path:"{{ item }}"
+         state: touch
+         mode: 0777
+       with_items:
+         - filename1.txt
+         - filename2.txt
+
+ansible-playbook file.yml   //to run the playbook to automatically create filename entered in the playbook
