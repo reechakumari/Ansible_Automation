@@ -1,0 +1,9 @@
+vi httpd.yml    //httpd.yml playbook name
+
+- hosts: localhost
+  tasks:
+   - package:
+       name: httpd
+       state: present
+       
+ansible-playbook httpd.yml   //to run the playbook to install the package of httpd(apache) service
